@@ -1,13 +1,46 @@
+//@font-face {
+//  font-family: 'Open Sans Condensed', sans-serif;
+//}
+
+
 html {
   height: 100%;
   width: 100%;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: PT Sans, sans-serif;
   font-size: 14px;
   line-height: 22px;
-  width: 960px;
-  background-color: red;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
+header {
+  width: 100%;
+  height: 220px;
+  background-color: #dcdcdc;
+
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  div{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40pt;
+    line-height: initial;
+    color: rgba(118, 118, 118, 255);
+    text-align: right;
+    margin-left: auto;   }
+}
