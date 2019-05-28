@@ -27,13 +27,13 @@ body {
 
 header {
   width: 100%;
-  height: 220px;
+  min-height: 220px;
   background-color: #dcdcdc; }
 
 .container {
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 10px 0;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,10 +50,11 @@ header {
   align-items: center; }
   .container div {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 40pt;
+    margin-left: auto;
+    font-size: 35px;
+    font-weight: lighter;
     line-height: initial;
-    color: #767676;
-    margin-left: auto; }
+    color: #767676; }
 
 menu {
   background-color: #777777;
@@ -62,10 +63,10 @@ menu {
   padding-left: 0;
   margin: 0; }
   menu ul {
-    width: 980px;
+    max-width: 980px;
     height: 100%;
     margin: auto;
-    padding: auto 10px;
+    padding: 0 10px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -82,13 +83,19 @@ menu {
     menu ul li {
       list-style-type: none;
       font-size: 20pt;
-      color: white; }
-      menu ul li:before {
-        content: "\00a0\00a0\00a0\00a0\00a0|\00a0\00a0\00a0\00a0\00a0"; }
+      color: white;
+      border-right: 1px solid white;
+      padding-right: 30px;
+      margin-left: 30px; }
+      menu ul li:hover {
+        text-decoration: underline;
+        cursor: pointer; }
       menu ul li:first-of-type {
         margin-left: 0; }
         menu ul li:first-of-type:before {
           content: " "; }
+      menu ul li:last-of-type {
+        border-right: none; }
 
 .slider {
   width: 100%;
@@ -99,7 +106,7 @@ menu {
 
 main {
   max-width: 980px;
-  margin: 0 auto;
+  margin: 20px auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,5 +137,38 @@ main {
 
 footer {
   width: 100%;
-  height: 220px;
-  background-color: #777777; }
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  margin-top: auto;
+  margin-bottom: 0;
+  background-color: #777777;
+  color: #d4d4d4; }
+
+.cont {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.fcenter ul {
+  margin-top: 0; }
+
+.fcenter li {
+  list-style-type: none;
+  text-decoration: underline; }
+
+.fright {
+  width: 220px; }
+  .fright img {
+    float: left;
+    margin-right: 10px; }

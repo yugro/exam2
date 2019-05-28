@@ -25,14 +25,14 @@ body {
 
 header {
   width: 100%;
-  height: 220px;
+  min-height: 220px;
   background-color: #dcdcdc;
 }
 
 .container {
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 10px 0;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -41,10 +41,11 @@ header {
 
   div {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 40pt;
+    margin-left: auto;
+    font-size: 35px;
+    font-weight: lighter;
     line-height: initial;
     color: rgba(118, 118, 118, 255);
-    margin-left: auto;
   }
 }
 
@@ -57,10 +58,10 @@ menu {
 
 
   ul {
-    width: 980px;
+    max-width: 980px;
     height: 100%;
     margin: auto;
-    padding: auto 10px;
+    padding: 0 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -71,11 +72,18 @@ menu {
       list-style-type: none;
       font-size: 20pt;
       color: rgba(255, 255, 255, 255);
-      //text-align: center;
-      //margin-left: auto;
-      &:before {
-        content: "\00a0\00a0\00a0\00a0\00a0|\00a0\00a0\00a0\00a0\00a0";
+      border-right: 1px solid white;
+      padding-right: 30px;
+      margin-left: 30px;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
       }
+
+      //&:before {
+      //  content: "\00a0\00a0\00a0\00a0\00a0|\00a0\00a0\00a0\00a0\00a0";
+      //}
 
       &:first-of-type {
         margin-left: 0;
@@ -84,8 +92,13 @@ menu {
           content: " ";
         }
       }
+
+      &:last-of-type {
+        border-right: none;
+      }
     }
   }
+
 }
 
 .slider {
@@ -100,7 +113,7 @@ menu {
 
 main {
   max-width: 980px;
-  margin: 0 auto;
+  margin: 20px auto 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -129,7 +142,39 @@ main {
 
 footer {
   width: 100%;
-  height: 220px;
-  //margin-top: auto;
+  min-height: fit-content;
+  margin-top: auto;
+  margin-bottom: 0;
   background-color: #777777;
+  color: #d4d4d4;
+}
+
+.cont {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fcenter {
+
+  ul {
+    margin-top: 0;
+  }
+
+  li {
+    list-style-type: none;
+    text-decoration: underline;
+  }
+}
+
+.fright {
+  width: 220px;
+
+  img {
+    float: left;
+    margin-right: 10px;
+  }
 }
